@@ -8,7 +8,7 @@ Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	d2304ad168c77f43106106359ba76557
+# Source0-md5:	b3e3350b3ee60902cefb017c5e70fb3f
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
