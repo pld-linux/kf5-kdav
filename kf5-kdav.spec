@@ -1,14 +1,14 @@
-%define		kdeframever	5.81
+%define		kdeframever	5.82
 %define		qtver		5.15.0
 %define		kfname		kdav
 Summary:	Kdav
 Name:		kf5-%{kfname}
-Version:	5.81.0
+Version:	5.82.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	41c422cddc5694a95f24543082d8dd05
+# Source0-md5:	6014e8e133fa66afc140687731839cb5
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
