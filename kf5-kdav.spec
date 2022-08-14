@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.96
+%define		kdeframever	5.97
 %define		qtver		5.15.2
 %define		kfname		kdav
 Summary:	Kdav
 Name:		kf5-%{kfname}
-Version:	5.96.0
+Version:	5.97.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	4db7016d712ff5e540e437dfe23eddd5
+# Source0-md5:	41abc6ed2ff884c1400fc9caa0138731
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
