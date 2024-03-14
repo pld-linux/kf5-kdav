@@ -1,22 +1,23 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.249.0
+%define		kdeframever	5.114
 %define		qtver		5.15.2
 %define		kfname		kdav
 Summary:	Kdav
 Name:		kf5-%{kfname}
-Version:	5.249.0
-Release:	0.1
+Version:	5.114.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	655505f54a71093630483e8ddb7b061f
+Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	facaa9c0a30b31390f060843ca4970be
 URL:		http://www.kde.org/
-BuildRequires:	Qt6Core-devel >= %{qtver}
-BuildRequires:	Qt6Gui-devel
-BuildRequires:	Qt6Network-devel >= 5.11.1
-BuildRequires:	Qt6Test-devel
+BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel
+BuildRequires:	Qt5Network-devel >= 5.11.1
+BuildRequires:	Qt5Test-devel
+BuildRequires:	Qt5XmlPatterns-devel
 BuildRequires:	cmake >= 3.16
 BuildRequires:	gettext-devel
 BuildRequires:	kf5-extra-cmake-modules >= %{kdeframever}
@@ -24,7 +25,7 @@ BuildRequires:	kf5-kcoreaddons-devel >= %{kdeframever}
 BuildRequires:	kf5-ki18n-devel >= %{kdeframever}
 BuildRequires:	kf5-kio-devel >= %{kdeframever}
 BuildRequires:	ninja
-BuildRequires:	qt6-build >= %{qtver}
+BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -78,13 +79,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%{_datadir}/qlogging-categories6/kdav.categories
-%ghost %{_libdir}/libKF6DAV.so.6
-%attr(755,root,root) %{_libdir}/libKF6DAV.so.5.*.*
-%{_datadir}/qlogging-categories6/kdav.renamecategories
+%{_datadir}/qlogging-categories5/kdav.categories
+%ghost %{_libdir}/libKF5DAV.so.5
+%attr(755,root,root) %{_libdir}/libKF5DAV.so.5.*.*
+%{_datadir}/qlogging-categories5/kdav.renamecategories
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/KF6/KDAV
-%{_libdir}/cmake/KF6DAV
-%{_libdir}/libKF6DAV.so
+%{_includedir}/KF5/KDAV
+%{_libdir}/cmake/KF5DAV
+%{_libdir}/libKF5DAV.so
+%{_libdir}/qt5/mkspecs/modules/qt_KDAV.pri
